@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katka House - Homestay & Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Scriptss.js">
+
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .Katka-gold { background-color: #D4A574; }
+        .Katka-gold-hover:hover { background-color: #C19A6B; }
+        .Katka-brown { color: #8B4513; }
+        .Katka-bg { background-color: #F5F5DC; }
+        .hero-overlay { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); }
+        .room-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .room-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        .signature-text { font-family: 'Playfair Display', serif; font-style: italic; }
+        .floating-animation { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 Katka-gold rounded-lg flex items-center justify-center">
+                    <i class="fas fa-home text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold Katka-brown font-playfair">Katka House</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-yellow-600 transition-colors">Trang chủ</a>
+                <a href="#about" class="text-gray-700 hover:text-yellow-600 transition-colors">Giới thiệu</a>
+                <a href="#rooms" class="text-gray-700 hover:text-yellow-600 transition-colors">Phòng</a>
+                <a href="#contact" class="text-gray-700 hover:text-yellow-600 transition-colors">Liên hệ</a>
+            </nav>
+            <button class="Katka-gold Katka-gold-hover text-white px-6 py-2 rounded-full font-semibold transition-colors"><a href="https://www.facebook.com/katkahomestay.haiphong/">Đặt phòng ngay</a>
+            </button>
+           <!--<button class="md:hidden" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>--> 
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700">Trang chủ</a>
+                <a href="#about" class="block py-2 text-gray-700">Giới thiệu</a>
+                <a href="#rooms" class="block py-2 text-gray-700">Phòng</a>
+                <a href="#contact" class="block py-2 text-gray-700">Liên hệ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center parallax" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+        <div class="text-center text-white z-10">
+            <div class="mb-8">
+                <div class="flex justify-center items-center space-x-2 mb-4">
+                    <span class="text-sm font-medium bg-yellow-600 px-4 py-2 rounded-full">Signature</span>
+                    <span class="text-sm font-medium">by Katka HOUSE</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-playfair mb-4">
+                    Home <span class="signature-text">isn't a place,</span>
+                </h1>
+                <h2 class="text-4xl md:text-6xl font-playfair signature-text">
+                    it's a feeling...!
+                </h2>
+            </div>
+            <div class="floating-animation">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold Katka-brown mb-6 font-playfair">NƠI TẬN HƯỞNG CUỘC SỐNG</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Chào mừng bạn đến với Katka House - nơi mang đến trải nghiệm homestay 
+                        độc đáo! Tên gọi "Katka" trong tiếng Thụy Điển mang ý nghĩa "vừa đủ", gợi 
+                        nhớ đến lối sống cân bằng, hài hòa. Tại Katka House, chúng tôi không chỉ 
+                        cung cấp chỗ ở mà còn mang đến một cảm giác thư giãn sâu sắc.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Hãy đắm mình trong không khí trong lành, cảnh quan thiên nhiên tuyệt đẹp và 
+                        không gian yên bình với các đặc điểm về tâm trí và cơ thể. Đừng bỏ qua hoạt 
+                        cơ những giây phút thư giãn tuyệt vời.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Đặt chân đến Katka House, bạn sẽ tìm thấy sự yên bình giữa hào hảo bộn bề 
+                        của cuộc sống, khám phá vẻ đẹp của phương và hiệp thêm năng lượng tích cực cho 
+                        hành trình của mình. Hãy đến và cảm nhận tình thần "vừa đủ" mà Katka House 
+                        mang lại!
+                    </p>
+                    <button class="Katka-gold Katka-gold-hover text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                        Đặt phòng ngay
+                    </button>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Katka House Interior" class="w-full h-48 object-cover rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Katka House Bedroom" class="w-full h-32 object-cover rounded-lg shadow-lg">
+                    </div>
+                    <div class="space-y-4 mt-8">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Katka House Kitchen" class="w-full h-32 object-cover rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Katka House Living Room" class="w-full h-48 object-cover rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold Katka-brown mb-4 font-playfair">HẠNG PHÒNG CỦA CHÚNG TÔI</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Chúng tôi cung cấp nhiều loại phòng với chất lượng tuyệt vời, mang đến sự đa dạng 
+                    phù hợp với mọi nhu cầu của quý khách.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Netflix Room" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fab fa-netflix mr-1"></i>Netflix
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Phòng Netflix</h3>
+                        <p class="text-gray-600 mb-4">Phòng giải trí với TV lớn và không gian thư giãn thoải mái</p>
+                        <button class="Katka-gold Katka-gold-hover text-white px-6 py-2 rounded-full font-semibold transition-colors w-full">
+                            Đặt phòng ngay
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Pink Room" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-heart mr-1"></i>Pink
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Phòng Pink</h3>
+                        <p class="text-gray-600 mb-4">Thiết kế feminine với tông màu pastel dễ thương</p>
+                        <button class="Katka-gold Katka-gold-hover text-white px-6 py-2 rounded-full font-semibold transition-colors w-full">
+                            Đặt phòng ngay
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Modern Room" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-star mr-1"></i>Premium
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Phòng Premium</h3>
+                        <p class="text-gray-600 mb-4">Thiết kế sang trọng với view đẹp và tiện nghi cao cấp</p>
+                        <button class="Katka-gold Katka-gold-hover text-white px-6 py-2 rounded-full font-semibold transition-colors w-full">
+                            Đặt phòng ngay
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Standard Room" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-home mr-1"></i>Standard
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Phòng Standard</h3>
+                        <p class="text-gray-600 mb-4">Thiết kế tối giản, thoải mái với đầy đủ tiện nghi</p>
+                        <button class="Katka-gold Katka-gold-hover text-white px-6 py-2 rounded-full font-semibold transition-colors w-full">
+                            Đặt phòng ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 Katka-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold Katka-brown mb-4 font-playfair">DỊCH VỤ & TIỆN ÍCH</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Trải nghiệm đầy đủ các dịch vụ và tiện ích hiện đại tại Katka House
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 Katka-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wifi text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Wi-Fi Miễn Phí</h3>
+                    <p class="text-gray-600">Kết nối internet tốc độ cao miễn phí trong toàn bộ khu vực</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 Katka-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bãi Đỗ Xe</h3>
+                    <p class="text-gray-600">Bãi đỗ xe rộng rãi và an toàn cho khách hàng</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 Katka-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-concierge-bell text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dịch Vụ 24/7</h3>
+                    <p class="text-gray-600">Hỗ trợ khách hàng 24/7 với đội ngũ nhân viên chuyên nghiệp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 font-playfair">Đặt Phòng Ngay</h2>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Hãy liên hệ với chúng tôi để đặt phòng và trải nghiệm không gian "vừa đủ" 
+                        tại Katka House. Chúng tôi cam kết mang đến cho bạn những kỷ niệm đáng nhớ.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 Katka-gold rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Điện thoại</p>
+                                <p class="text-gray-300">+84 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 Katka-gold rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-300">info@Katkahouse.com.vn</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 Katka-gold rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Địa chỉ</p>
+                                <p class="text-gray-300">123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6 Katka-brown">Form Đặt Phòng</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Họ và tên" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                            <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="tel" placeholder="Số điện thoại" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                                <option>Chọn loại phòng</option>
+                                <option>Phòng Netflix</option>
+                                <option>Phòng Pink</option>
+                                <option>Phòng Premium</option>
+                                <option>Phòng Standard</option>
+                            </select>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="date" placeholder="Ngày nhận phòng" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                            <input type="date" placeholder="Ngày trả phòng" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                        </div>
+                        <textarea placeholder="Ghi chú thêm" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600"></textarea>
+                        <button type="submit" class="w-full Katka-gold Katka-gold-hover text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                            Gửi Yêu Cầu Đặt Phòng
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 Katka-gold rounded-lg flex items-center justify-center">
+                            <i class="fas fa-home text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-playfair">Katka House</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Nơi mang đến trải nghiệm homestay độc đáo với triết lý "vừa đủ" của người Thụy Điển.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên Kết</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-yellow-600 transition-colors">Trang chủ</a></li>
+                        <li><a href="#about" class="hover:text-yellow-600 transition-colors">Giới thiệu</a></li>
+                        <li><a href="#rooms" class="hover:text-yellow-600 transition-colors">Phòng</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-600 transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Dịch Vụ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Wi-Fi Miễn Phí</li>
+                        <li>Bãi Đỗ Xe</li>
+                        <li>Dịch Vụ 24/7</li>
+                        <li>Đặt Phòng Online</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Theo Dõi</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 Katka-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 Katka-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 Katka-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Katka House. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 Katka-gold Katka-gold-hover text-white w-12 h-12 rounded-full shadow-lg hidden transition-all duration-300 hover:scale-110">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+
+<script>
+    
+        // Mobile menu toggle
+        /*function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }*/
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.pageYOffset > 100) {
+                header.classList.add('bg-white', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã gửi yêu cầu đặt phòng! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+            this.reset();
+        });
+
+        // Room booking buttons
+        /*document.querySelectorAll('.room-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                const roomName = this.parentElement.querySelector('h3').textContent;
+                alert(`Bạn đã chọn ${roomName}. Vui lòng điền form bên dưới để hoàn tất đặt phòng.`);
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Header booking button
+        document.querySelector('header button').addEventListener('click', function() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });*/
+
+        // About section booking button
+        document.querySelector('#about button').addEventListener('click', function() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.room-card, .bg-white.p-8').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add CSS for fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .animate-fadeInUp {
+                animation: fadeInUp 0.6s ease-out forwards;
+            }
+        `;
+        document.head.appendChild(style);
+
+</script>
+</html>
